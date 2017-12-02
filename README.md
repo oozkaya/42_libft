@@ -1,10 +1,10 @@
-libft
+#libft
 
-Premier projet de l'ecole 42 : coder une librairie libft.a à l'identique pour les fonctions de la premiere partie et en suivant les recommendations dans la seconde partie.
+###Premier projet de l'ecole 42 : coder une librairie libft.a à l'identique pour les fonctions de la premiere partie et en suivant les recommendations dans la seconde partie. La partie bonus concerne quelques fonctions sur les listes chainées, et le reste regroupe quelques fonctions persos.
 
 
 Partie 1 | Partie 2 | Partie Bonus | Persos
------------ | ----------- | :-----------: | -----------
+----------- | ----------- | ----------- | -----------
 ft_memset | ft_memalloc | ft_lstnew | ft_abs
 ft_bzero | ft_memdel | ft_lstdelone | ft_isupper
 ft_memcpy | ft_strnew | ft_lstdel | ft_islower
@@ -34,40 +34,39 @@ ft_isprint |
 ft_toupper |
 ft_tolower |
 
-Partie 1
+##Partie 1
 
-Consulter le man pour la description des fonctions suivantes :
+###Les fonctions de la partie 1 sont celles tirées de la libC, explications consultables dans leurs mans ! 
 
-ft_memset
-ft_bzero
-ft_memcpy
-ft_memccpy
-ft_memmove
-ft_memchr
-ft_memcmp
-ft_strlen
-ft_strdup
-ft_strcpy
-ft_strncpy
-ft_strcat
-ft_strncat
-ft_strlcat
-ft_strchr
-ft_strrchr
-ft_strstrs
-ft_strnstr
-ft_strcmp
-ft_strncmp
-ft_atoi
-ft_isalpha
-ft_isdigit
-ft_isalnum
-ft_isascii
-ft_isprint
-ft_toupper
-ft_tolower
-Partie 2
 
+##Partie 2
+
+
+| Function name | Description                    |
+| ------------- | ------------------------------ |
+| `ft_memalloc` | Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.|
+| `destroy()`   | **Destroy your computer!**     |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
+| | |
 ft_memalloc
 
 Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
