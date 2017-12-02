@@ -1,108 +1,78 @@
 #libft
-====
+
 ###Premier projet de l'ecole 42 : coder une librairie libft.a à l'identique pour les fonctions de la premiere partie et en suivant les recommendations dans la seconde partie. La partie bonus concerne quelques fonctions sur les listes chainées, et le reste regroupe quelques fonctions persos.
 ----
 
+
 Partie 1 | Partie 2 | Partie Bonus | Persos
 ----------- | ----------- | ----------- | -----------
-ft_memset | ft_memalloc | ft_lstnew | ft_abs
-ft_bzero | ft_memdel | ft_lstdelone | ft_isupper
-ft_memcpy | ft_strnew | ft_lstdel | ft_islower
-ft_memccpy | ft_strdel | ft_lstadd | ft_strlwr
-ft_memmove | ft_strclr | ft_lstiter | ft_strupr
-ft_memchr | ft_striter | ft_lstdelone | ft_capitalize
-ft_memcmp | ft_striteri |
-ft_strlen | ft_strmap |
-ft_strdup | ft_strmapi |
-ft_strcpy | ft_strequ |
-ft_strncpy | ft_strnequ |
-ft_strcat | ft_strsub |
-ft_strncat | ft_strjoin |
-ft_strlcat | ft_strtrim |
-ft_strchr | ft_strsplit |
-ft_strrchr | ft_itoa |
-ft_strstrs | ft_putchar |
-ft_strnstr | ft_putstr |
-ft_strcmp | ft_putendl |
-ft_strncmp | ft_putnbr |
-ft_atoi | ft_putchar_fd |
-ft_isalpha | ft_putstr_fd |
-ft_isdigit | ft_putendl_fd |
-ft_isalnum | ft_putnbr_fd |
-ft_isascii |
-ft_isprint |
-ft_toupper |
-ft_tolower |
+'ft_memset' | 'ft_memalloc' | 'ft_lstnew' | 'ft_abs'
+'ft_bzero' | 'ft_memdel | 'ft_lstdelone' | 'ft_isupper'
+'ft_memcpy' | 'ft_strnew' | 'ft_lstdel' | 'ft_islower'
+'ft_memccpy' | 'ft_strdel' | 'ft_lstadd' | 'ft_strlwr'
+'ft_memmove' | 'ft_strclr' | 'ft_lstiter' | 'ft_strupr'
+'ft_memchr' | 'ft_striter' | 'ft_lstdelone' | 'ft_capitalize'
+'ft_memcmp' | 'ft_striteri' |
+'ft_strlen' | 'ft_strmap' |
+'ft_strdup' | 'ft_strmapi' |
+'ft_strcpy' | 'ft_strequ' |
+'ft_strncpy' | 'ft_strnequ' |
+'ft_strcat' | 'ft_strsub' |
+'ft_strncat' | 'ft_strjoin' |
+'ft_strlcat' | 'ft_strtrim' |
+'ft_strchr' | 'ft_strsplit' |
+'ft_strrchr' | 'ft_itoa' |
+'ft_strstrs' | 'ft_putchar' |
+'ft_strnstr' | 'ft_putstr' |
+'ft_strcmp' | 'ft_putendl' |
+'ft_strncmp' | 'ft_putnbr' |
+'ft_atoi' | 'ft_putchar_fd' |
+'ft_isalpha' | 'ft_putstr_fd' |
+'ft_isdigit' | 'ft_putendl_fd' |
+'ft_isalnum' | 'ft_putnbr_fd' |
+'ft_isascii' |
+'ft_isprint' |
+'ft_toupper' |
+'ft_tolower' |
 
+
+----
 ##Partie 1
 
 ###Les fonctions de la partie 1 sont celles tirées de la libC, explications consultables dans leurs mans ! 
-
+----
 
 ##Partie 2
 
 
 | Function name | Description                    |
 | ------------- | ------------------------------ |
-| `ft_memalloc` | Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.|
-| `destroy()`   | **Destroy your computer!**     |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-| | |
-ft_memalloc
+| `ft_memalloc` | Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL. |
+| `ft_memdel`   | Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL. |
+| `ft_strnew` | Alloue avec malloc(3) et retourne une chaine de caractere “fraiche” terminee par un ’\0’. Chaque caractere de la chaine est initialise a ’\0’. Si l’allocation echoue, la fonction renvoie NULL. |
+| `ft_strdel` | Prend en parametre l’adresse d’une chaine de caracteres qui doit etre liberee avec free(3) et son pointeur mis a NULL |
+| `ft_strclr` | Assigne la valeur ’\0’ a tous les caracteres de la chaine passee en parametre. |
+| `ft_striter` | Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre. Chaque caractere est passe par adresse a la fonction f afin de pouvoir être modifie si necessaire. |
+| `ft_striteri` | Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index en premier argument. Chaque caractere est passe par adresse a la fonction f afin de pouvoir etre modifie si necessaire. |
+| `ft_strmap` | Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre pour creer une nouvelle chaine “fraiche” avec malloc(3) resultant des applications successives de f. |
+| `ft_strmapi` | Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index pour creer une nouvelle chaine “fraiche” avec malloc(3) resultant des applications successives de f. |
+| `ft_strequ` | Compare lexicographiquement s1 et s2. Si les deux chaines sont egales, la fonction retourne 1, ou 0 sinon. |
+| `ft_strnequ` | Compare lexicographiquement s1 et s2 jusqu’a n caracteres maximum ou bien qu’un ’\0’ ait ete rencontre. Si les deux chaines sont egales, la fonction retourne 1, ou 0 sinon. |
+| `ft_strsub` | Alloue avec malloc(3) et retourne la copie "fraiche" d'un troncon de la chaine de caracteres passee en parametre. Le troncon commence a l'index start et a pour longueur len. Si start et len ne designent pas un troncon de chaine valide, le comportement est indetermine. Si l'allocation echoue, la fonction renvoie NULL. |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+| `ft_memdel` |  |
+----
 
-Alloue avec malloc(3) et retourne une zone de memoire "fraiche". La memoire allouee est intialisee a 0. Si l'allocation echoue, la fonction renvoie NULL.
-ft_memdel
 
-Prend en parametre l’adresse d’un pointeur dont la zone pointee doit etre liberee avec free(3), puis le pointeur est mis a NULL.
-ft_strnew
-
-Alloue avec malloc(3) et retourne une chaine de caractere “fraiche” terminee par un ’\0’. Chaque caractere de la chaine est initialise a ’\0’. Si l’allocation echoue, la fonction renvoie NULL.
-ft_strdel
-
-Prend en parametre l’adresse d’une chaine de caracteres qui doit etre liberee avec free(3) et son pointeur mis a NULL.
-ft_strclr
-
-Assigne la valeur ’\0’ a tous les caracteres de la chaine passee en parametre.
-ft_striter
-
-Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre. Chaque caractere est passe par adresse a la fonction f afin de pouvoir être modifie si necessaire.
-ft_striteri
-
-Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index en premier argument. Chaque caractere est passe par adresse a la fonction f afin de pouvoir etre modifie si necessaire.
-ft_strmap
-
-Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre pour creer une nouvelle chaine “fraiche” avec malloc(3) resultant des applications successives de f.
-ft_strmapi
-
-Applique la fonction f a chaque caractere de la chaine de caracteres passee en parametre en precisant son index pour creer une nouvelle chaine “fraiche” avec malloc(3) resultant des applications successives de f.
-ft_strequ
-
-Compare lexicographiquement s1 et s2. Si les deux chaines sont egales, la fonction retourne 1, ou 0 sinon.
-ft_strnequ
-
-Compare lexicographiquement s1 et s2 jusqu’a n caracteres maximum ou bien qu’un ’\0’ ait ete rencontre. Si les deux chaines sont egales, la fonction retourne 1, ou 0 sinon.
-ft_strsub
-
-Alloue avec malloc(3) et retourne la copie "fraiche" d'un troncon de la chaine de caracteres passee en parametre. Le troncon commence a l'index start et a pour longueur len. Si start et len ne designent pas un troncon de chaine valide, le comportement est indetermine. Si l'allocation echoue, la fonction renvoie NULL.
 ft_strjoin
 
 Alloue avec malloc(3) et retourne une chaine de caracteres "fraiche" terminee pas un '\0' resultant de la concatenation de s1 et s2. Si l'allocation echoue, la fonction renvoie NULL.
