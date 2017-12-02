@@ -3,7 +3,7 @@ libft
 Premier projet de l'ecole 42 : coder une librairie libft.a à l'identique pour les fonctions de la premiere partie et en suivant les recommendations dans la seconde partie.
 
 
-Partie 1  | Partie 2 | Partie Bonus | Persos
+   Partie 1   |   Partie 2    | Partie Bonus  |    Persos
 :-----------: | :-----------: | :-----------: | :-----------:
 Content Cell  | Content Cell  |  ft_lstnew    |
 Content Cell  | Content Cell  | ft_lstdelone  |
