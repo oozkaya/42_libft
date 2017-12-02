@@ -100,4 +100,4 @@ Partie 1 | Partie 2 | Partie Bonus | Persos
 | `ft_islower`  | Retourne vrai si le caractere c passe est en minuscule. Ne fonctionne qu'avec les caracteres ASCII. |
 | `ft_strlwr`   | Passe toute la chaine de caractere en minuscule. |
 | `ft_strupr`   | Passe toute la chaine de caractere en majuscule. |
-| `ft_capitalize` | Passe toute la chaine de caractere en majuscule. |
+| `ft_capitalize` | Passe chaque première lettre de chaque mot de la chaine de caractere en majuscule et le reste en minuscule. |
