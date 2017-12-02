@@ -4,7 +4,7 @@ Premier projet de l'ecole 42 : coder une librairie libft.a à l'identique pour l
 
 
 Partie 1  | Partie 2 | Partie Bonus | Persos
-------------- | ------------- | ------------- | -------------
+:-----------: | :-----------: | :-----------: | :-----------:
 Content Cell  | Content Cell  |  ft_lstnew    |
 Content Cell  | Content Cell  | ft_lstdelone  |
 Content Cell  | Content Cell  |  ft_lstdel    |
