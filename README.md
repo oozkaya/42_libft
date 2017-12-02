@@ -11,28 +11,28 @@ ft_memcpy | ft_strnew | ft_lstdel | ft_islower
 ft_memccpy | ft_strdel | ft_lstadd | ft_strlwr
 ft_memmove | ft_strclr | ft_lstiter | ft_strupr
 ft_memchr | ft_striter | ft_lstdelone | ft_capitalize
-ft_memcmp | ft_striteri | |
-ft_strlen | ft_strmap | |
-ft_strdup | ft_strmapi | |
-ft_strcpy | ft_strequ | |
-ft_strncpy | ft_strnequ | |
-ft_strcat | ft_strsub | |
-ft_strncat | ft_strjoin | |
-ft_strlcat | ft_strtrim | |
-ft_strchr | ft_strsplit | |
-ft_strrchr | ft_itoa | |
-ft_strstrs | ft_putchar | |
-ft_strnstr | ft_putstr | |
-ft_strcmp | ft_putendl | |
-ft_strncmp | ft_putnbr | |
-ft_atoi | ft_putchar_fd | |
-ft_isalpha | ft_putstr_fd | |
-ft_isdigit | ft_putendl_fd | |
-ft_isalnum | ft_putnbr_fd | |
-ft_isascii | | |
-ft_isprint | | |
-ft_toupper | | |
-ft_tolower | | |
+ft_memcmp | ft_striteri |
+ft_strlen | ft_strmap |
+ft_strdup | ft_strmapi |
+ft_strcpy | ft_strequ |
+ft_strncpy | ft_strnequ |
+ft_strcat | ft_strsub |
+ft_strncat | ft_strjoin |
+ft_strlcat | ft_strtrim |
+ft_strchr | ft_strsplit |
+ft_strrchr | ft_itoa |
+ft_strstrs | ft_putchar |
+ft_strnstr | ft_putstr |
+ft_strcmp | ft_putendl |
+ft_strncmp | ft_putnbr |
+ft_atoi | ft_putchar_fd |
+ft_isalpha | ft_putstr_fd |
+ft_isdigit | ft_putendl_fd |
+ft_isalnum | ft_putnbr_fd |
+ft_isascii |
+ft_isprint |
+ft_toupper |
+ft_tolower |
 
 Partie 1
 
