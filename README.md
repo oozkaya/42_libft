@@ -2,6 +2,12 @@ libft
 
 Premier projet de l'ecole 42 : coder une librairie libft.a à l'identique pour les fonctions de la premiere partie et en suivant les recommendations dans la seconde partie.
 
+
+	Partie 1  | Partie 2
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
 Partie 1
 
 Consulter le man pour la description des fonctions suivantes :
