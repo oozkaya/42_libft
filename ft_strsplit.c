@@ -59,6 +59,8 @@ char			**ft_strsplit(const char *str, char c)
 	int		wrd;
 	char	**s;
 
+	if (!str)
+		return (NULL);
 	i = 0;
 	j = 0;
 	wrd = ft_count_words(str, c);
