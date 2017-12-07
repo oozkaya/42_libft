@@ -12,49 +12,18 @@
 
 #include "libft.h"
 
-static int	ft_end(char const *s, int len)
+char	*ft_strtrim(char const *s)
 {
-	int		end;
+	char const	*s_end;
 
-	while (s[len] == ' ' || s[len] == '\n' || s[len] == '\t' || s[len] == 0)
-		len--;
-	end = len;
-	return (end);
-}
-
-static int	ft_start(char const *s, int len)
-{
-	int		i;
-	int		start;
-
-	i = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-	{
-		len--;
-		i++;
-	}
-	start = i;
-	return (start);
-}
-
-char		*ft_strtrim(char const *s)
-{
-	char	*new;
-	int		i;
-	int		len;
-	int		start;
-	int		end;
-
-	if (!s)
+	if (s == NULL)
 		return (NULL);
-	len = ft_strlen(s);
-	end = ft_end(s, len);
-	start = ft_start(s, len);
-	if (!(new = (char*)malloc(sizeof(*new) * (len / 2))))
-		return (NULL);
-	i = 0;
-	while (start <= end)
-		new[i++] = s[start++];
-	new[i] = '\0';
-	return (new);
+	while (*s == ' ' || *s == '\t' || *s == '\n')
+		s++;
+	if (*s == '\0')
+		return (ft_strnew(0));
+	s_end = s + ft_strlen(s) - 1;
+	while (*s_end == ' ' || *s_end == '\t' || *s_end == '\n')
+		s_end--;
+	return (ft_strsub(s, 0, s_end - s + 1));
 }
