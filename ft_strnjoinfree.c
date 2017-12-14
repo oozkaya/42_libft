@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strnjoinfree.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oozkaya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 17:45:40 by oozkaya           #+#    #+#             */
-/*   Updated: 2017/12/14 09:44:27 by oozkaya          ###   ########.fr       */
+/*   Created: 2017/12/14 08:48:07 by oozkaya           #+#    #+#             */
+/*   Updated: 2017/12/14 08:48:09 by oozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strnjoinfree(char const *s1, char const *s2, size_t len, int pick)
 {
-	char const	*s_end;
+	char	*join;
 
-	if (s == NULL)
+	if (pick < 0 || pick > 2)
 		return (NULL);
-	while (*s == ' ' || *s == '\t' || *s == '\n')
-		s++;
-	if (*s == '\0')
-		return (ft_strnew(0));
-	s_end = s + ft_strlen(s) - 1;
-	while (*s_end == ' ' || *s_end == '\t' || *s_end == '\n')
-		s_end--;
-	return (ft_strsub(s, 0, s_end - s + 1));
+	join = ft_strnjoin(s1, s2, len);
+	if (pick == 0 || pick == 2)
+		free((char*)s1);
+	if (pick == 1 || pick == 2)
+		free((char*)s2);
+	return (join);
 }

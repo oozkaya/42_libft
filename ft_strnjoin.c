@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strnjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oozkaya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 17:45:40 by oozkaya           #+#    #+#             */
-/*   Updated: 2017/12/14 09:44:27 by oozkaya          ###   ########.fr       */
+/*   Created: 2017/12/14 08:47:58 by oozkaya           #+#    #+#             */
+/*   Updated: 2017/12/14 08:48:01 by oozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strnjoin(char const *s1, char const *s2, size_t len)
 {
-	char const	*s_end;
+	char	*s;
+	char	*join;
 
-	if (s == NULL)
+	if (!s1 || !s2)
 		return (NULL);
-	while (*s == ' ' || *s == '\t' || *s == '\n')
-		s++;
-	if (*s == '\0')
-		return (ft_strnew(0));
-	s_end = s + ft_strlen(s) - 1;
-	while (*s_end == ' ' || *s_end == '\t' || *s_end == '\n')
-		s_end--;
-	return (ft_strsub(s, 0, s_end - s + 1));
+	s = ft_strnew(ft_strlen(s1) + len + 1);
+	join = s;
+	while (*s1)
+		*s++ = *s1++;
+	while (*s2 && len--)
+		*s++ = *s2++;
+	return (join);
 }

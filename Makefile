@@ -1,4 +1,4 @@
-# **************************************************************************** #
+#**************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
@@ -6,7 +6,7 @@
 #    By: oozkaya <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/09 08:30:25 by oozkaya           #+#    #+#              #
-#    Updated: 2017/11/28 14:59:30 by oozkaya          ###   ########.fr        #
+#    Updated: 2017/12/14 09:40:35 by oozkaya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRC =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c \
 		ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_abs.c \
 		ft_strlwr.c ft_strupr.c ft_islower.c ft_isupper.c ft_capitalize.c \
+		ft_strnjoin.c ft_strjoinfree.c ft_strnjoinfree.c ft_strndup.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -56,9 +57,10 @@ $(NAME): $(OBJ)
 
 clean:
 	@/bin/rm -f $(OBJ)
-	@echo "Cleaning -> " $(NAME) $(DONE)
+	@echo "Cleaning all the Libft objects -> " $(SUCCESS)
 
 fclean: clean
 	@/bin/rm -f $(NAME)
+	@echo "Deleting -> " $(NAME) $(SUCCESS)
 
 re: fclean all

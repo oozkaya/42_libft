@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oozkaya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 17:45:40 by oozkaya           #+#    #+#             */
-/*   Updated: 2017/12/14 09:44:27 by oozkaya          ###   ########.fr       */
+/*   Created: 2017/12/14 08:47:32 by oozkaya           #+#    #+#             */
+/*   Updated: 2017/12/14 08:47:37 by oozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strndup(char const *s, size_t n)
 {
-	char const	*s_end;
+	char	*str;
 
-	if (s == NULL)
+	if (!(str = ft_strnew(n)))
 		return (NULL);
-	while (*s == ' ' || *s == '\t' || *s == '\n')
-		s++;
-	if (*s == '\0')
-		return (ft_strnew(0));
-	s_end = s + ft_strlen(s) - 1;
-	while (*s_end == ' ' || *s_end == '\t' || *s_end == '\n')
-		s_end--;
-	return (ft_strsub(s, 0, s_end - s + 1));
+	str = ft_strncpy(str, s, n);
+	str[n] = '\0';
+	return (str);
 }
