@@ -1,4 +1,4 @@
-#libft
+#libft@42
 
 ###Premier projet de l'ecole 42 : coder une librairie libft.a à l'identique pour les fonctions de la premiere partie et en suivant les recommendations dans la seconde partie. La partie bonus concerne quelques fonctions sur les listes chainées, et le reste regroupe quelques fonctions persos.
 ----
