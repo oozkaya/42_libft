@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oozkaya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/15 17:45:40 by oozkaya           #+#    #+#             */
-/*   Updated: 2017/12/07 14:42:27 by oozkaya          ###   ########.fr       */
+/*   Created: 2017/12/06 13:11:57 by oozkaya           #+#    #+#             */
+/*   Updated: 2018/02/01 13:03:27 by oozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-char	*ft_strtrim(char const *s)
-{
-	char const	*s_end;
+# include "libft.h"
+# include <unistd.h>
+# include <stdlib.h>
 
-	if (s == NULL)
-		return (NULL);
-	while (*s == ' ' || *s == '\t' || *s == '\n')
-		s++;
-	if (*s == '\0')
-		return (ft_strnew(0));
-	s_end = s + ft_strlen(s) - 1;
-	while (*s_end == ' ' || *s_end == '\t' || *s_end == '\n')
-		s_end--;
-	return (ft_strsub(s, 0, s_end - s + 1));
-}
+# define MALLCHECK(x) if (!x) return (-1);
+# define BUFF_SIZE 42
+
+int		get_next_line(const int fd, char **line);
+
+#endif

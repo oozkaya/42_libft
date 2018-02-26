@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oozkaya <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: oozkaya <oozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 11:50:59 by oozkaya           #+#    #+#             */
-/*   Updated: 2017/12/14 08:49:35 by oozkaya          ###   ########.fr       */
+/*   Updated: 2018/02/15 23:03:22 by oozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include "get_next_line.h"
 
 typedef struct	s_list
 {
@@ -94,5 +95,11 @@ char			*ft_strjoinfree(char const *s1, char const *s2, int pick);
 char			*ft_strnjoinfree(char const *s1, char const *s2, size_t len,
 					int pick);
 char			*ft_strndup(char const *s, size_t n);
+char			*ft_strrev(char *str);
+char			*ft_itoa_base(intmax_t nbr, int base);
+char			*ft_utoa_base(uintmax_t nbr, int base);
+int				ft_max(int a, int b);
+void			*ft_realloc(void *ptr, size_t size);
+int				ft_wslen(wchar_t *str);
 
 #endif

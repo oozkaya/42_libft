@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: oozkaya <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: oozkaya <oozkaya@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/15 16:48:02 by oozkaya           #+#    #+#              #
-#    Updated: 2017/12/15 17:37:15 by oozkaya          ###   ########.fr        #
+#    Updated: 2018/02/13 20:09:40 by oozkaya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 
-INC_DIR = includes/
+INC_DIR = includes
 SRC_DIR = ./
 SRC_1 = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c\
 		ft_memchr.c ft_memcmp.c\
@@ -43,7 +43,8 @@ SRC_BONUS = ft_lstnew.c ft_lstadd.c \
 
 SRC_EXTRA = ft_abs.c ft_capitalize.c ft_islower.c ft_isupper.c\
 			ft_strlwr.c ft_strupr.c ft_strnjoin.c ft_strndup.c\
-			ft_strjoinfree.c ft_strnjoinfree.c
+			ft_strjoinfree.c ft_strnjoinfree.c ft_strrev.c ft_itoa_base.c\
+			ft_max.c ft_realloc.c get_next_line.c ft_wslen.c
 
 SRC = $(SRC_1) $(SRC_2) $(SRC_BONUS) $(SRC_EXTRA)
 
