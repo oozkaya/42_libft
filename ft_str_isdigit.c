@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_str_isdigit.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oozkaya <oozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/09 14:04:47 by oozkaya           #+#    #+#             */
-/*   Updated: 2018/04/26 17:59:54 by oozkaya          ###   ########.fr       */
+/*   Created: 2018/03/19 16:39:43 by oozkaya           #+#    #+#             */
+/*   Updated: 2018/03/19 16:42:21 by oozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-intmax_t	ft_atoi(const char *str)
+int		ft_str_isdigit(char *str)
 {
-	int			i;
-	int			signe;
-	intmax_t	res;
+	int		i;
 
-	res = 0;
-	signe = 1;
 	i = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f'
-			|| str[i] == '\r' || str[i] == ' ')
+	if (str[0] == '-')
 		i++;
-	if (str[i] == '-')
-		signe = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[i])
 	{
-		res = res * 10 + str[i] - '0';
+		if (!ft_isdigit(str[i]))
+			return (0);
 		i++;
 	}
-	if (res > 9223372036854775807)
-		return (signe < 0 ? 0 : -1);
-	return (res * signe);
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: oozkaya <oozkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 11:50:59 by oozkaya           #+#    #+#             */
-/*   Updated: 2018/02/15 23:03:22 by oozkaya          ###   ########.fr       */
+/*   Updated: 2018/05/07 20:37:51 by oozkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include "get_next_line.h"
+# include "ft_printf.h"
 
 typedef struct	s_list
 {
@@ -43,7 +44,7 @@ char			*ft_strstr(const char *str, const char *to_find);
 char			*ft_strnstr(const char *str, const char *to_find, size_t len);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
-int				ft_atoi(const char *str);
+intmax_t		ft_atoi(const char *str);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -101,5 +102,7 @@ char			*ft_utoa_base(uintmax_t nbr, int base);
 int				ft_max(int a, int b);
 void			*ft_realloc(void *ptr, size_t size);
 int				ft_wslen(wchar_t *str);
+int				ft_str_isdigit(char *str);
+int				ft_strend(const char *s, const char *t);
 
 #endif
